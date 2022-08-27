@@ -4,6 +4,7 @@ using UnityEngine.XR.ARFoundation;
 
 public class DartController : MonoBehaviour
 {
+    public static DartController instance;
     public GameObject DartPrefab;
     public Transform DartThrowPoint;
     ARSessionOrigin aRSession;
@@ -19,15 +20,15 @@ public class DartController : MonoBehaviour
 
         
     }
-    void OnEnable()
+    void Awake()
     {
-        PlaceObjectOnPlane.onPlacedObject += DartsInit;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        DartsInit();
     }
-
-    void OnDisable()
-    {
-        PlaceObjectOnPlane.onPlacedObject -= DartsInit;
-    }
+    
 
     void Update()
     {
@@ -48,11 +49,12 @@ public class DartController : MonoBehaviour
                     currentDartScript.isForceOK = true;
 
                     ///Load next dart
-                    //DartsInit();
+                    DartsInit();
                 }
             }
         }
     }
+    
     /// <summary>
     /// ダーツを出す処理です
     /// </summary>

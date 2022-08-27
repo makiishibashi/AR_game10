@@ -10,7 +10,6 @@ public class PlaceObjectOnPlane : MonoBehaviour
     public static PlaceObjectOnPlane instance;
     public GameObject objectToPlace;
     public GameObject placementIndicator;
-    public GameObject shoot;
     private Pose placementPose;
     private Transform placementTransform;
     private bool placementPoseIsValid = false;
@@ -32,7 +31,6 @@ public class PlaceObjectOnPlane : MonoBehaviour
         }
         isObjectPlaced = false;
         m_RaycastManager = GetComponent<ARRaycastManager>();
-        shoot.SetActive(false);
         
     }
 
@@ -48,7 +46,6 @@ public class PlaceObjectOnPlane : MonoBehaviour
             if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             PlaceObject();
-            shoot.SetActive(true);
         }
         }
     }
@@ -94,6 +91,5 @@ public class PlaceObjectOnPlane : MonoBehaviour
         isObjectPlaced = true;
         placementIndicator.SetActive(false);
     }
-
 }
 

@@ -380,6 +380,7 @@ MonoBehaviour:
   objectToPlace: {fileID: 7572523633460641755, guid: 2c60332cd4467174bb295d11ac74b076, type: 3}
   placementIndicator: {fileID: 1336755912}
   shoot: {fileID: 2036785548}
+  isObjectPlaced: 0
 --- !u!1 &1336755912
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +581,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2036785550}
-  - component: {fileID: 2036785549}
   m_Layer: 0
   m_Name: ShootScript
   m_TagString: Untagged
@@ -588,21 +588,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &2036785549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036785548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db02c67dc589eec45b6a8664dd3a30c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arCamera: {fileID: 1709900846}
-  projectile: {fileID: 5714692348457409191, guid: c3be68fac9a074c2ea07000474129381, type: 3}
-  shootForce: 700
 --- !u!4 &2036785550
 Transform:
   m_ObjectHideFlags: 0
