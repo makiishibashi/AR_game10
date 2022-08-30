@@ -9,7 +9,7 @@ public class Scoring : MonoBehaviour
     TextMeshProUGUI scoreText;
     GameObject scoreBoardUI;
     public static int score;
-    int reset = 0;
+    //int reset = 0;
 
 
 
