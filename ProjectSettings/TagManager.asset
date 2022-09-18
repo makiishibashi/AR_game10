@@ -8,6 +8,10 @@ TagManager:
   - Cube
   - ScoreCanvas
   - ScoreOnBanner
+  - TimeSlider
+  - SliderFill
+  - TimerText
+  - GameOverText
   layers:
   - Default
   - TransparentFX
